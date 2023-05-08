@@ -137,21 +137,37 @@ function Title() {
     window.open("./files/resume.pdf");
   }
   return (
-    <h1 onClick={handleClick} className='flex justify-center items-center p-5 pt-3 text-5xl font-semibold bg-teal-950'>
+    <h1 onClick={handleClick} className='flex justify-center items-center p-5 text-5xl font-semibold bg-teal-950'>
       John Alexander Aydin
     </h1>
   )
 }
+function Socials(imgPath: string, link: string) {
+  function handleClick() {
+    window.open(link);
+  }
+  return (
+    <img
+      onClick={handleClick}
+      src={imgPath}
+      alt=""
+    />
+  )
+}
 export default function Gallery() {
   return (
-    <main className="h-screen bg-zinc-950 p-[50px] pt-5">
+    <main className="h-screen w-screen bg-zinc-950">
       <Title />
       <section>
         <h1>Cool Pictures!</h1>
-        {Pics("./Appa.png")}
-        {Pics("./Haku.png")}
-        {Pics("./Nishio.png")}
+        {Pics("./images/Appa.png")}
+        {Pics("./images/Haku.png")}
+        {Pics("./images/Nishio.png")}
       </section>
+      <footer className="w-screen fixed bottom-0 flex justify-end bg-teal-950">
+        {Socials("./images/icons/github.png", "https://github.com/John-A-Aydin")}
+        {Socials("./images/icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
+      </footer>
     </main>
   );
 }
