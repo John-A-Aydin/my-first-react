@@ -125,7 +125,6 @@ function Profile() {
   );
 }
 function Pics(filePath: string) {
-  
   return (
     <img
       src={filePath}
@@ -133,14 +132,27 @@ function Pics(filePath: string) {
     />
   );
 }
+function Title() {
+  function handleClick() {
+    window.open("./files/resume.pdf");
+  }
+  return (
+    <h1 onClick={handleClick} className='flex justify-center items-center p-5 pt-3 text-5xl font-semibold bg-teal-950'>
+      John Alexander Aydin
+    </h1>
+  )
+}
 export default function Gallery() {
   return (
-    <section>
-      <h1>Cool Pictures!</h1>
-      {Pics("./Appa.png")}
-      {Pics("./Haku.png")}
-      {Pics("./Nishio.png")}
-    </section>
+    <main className="h-screen bg-zinc-950 p-[50px] pt-5">
+      <Title />
+      <section>
+        <h1>Cool Pictures!</h1>
+        {Pics("./Appa.png")}
+        {Pics("./Haku.png")}
+        {Pics("./Nishio.png")}
+      </section>
+    </main>
   );
 }
 
