@@ -148,6 +148,7 @@ function Socials(imgPath: string, link: string) {
   }
   return (
     <img
+      className='pr-4'
       onClick={handleClick}
       src={imgPath}
       alt=""
@@ -160,9 +161,6 @@ export default function Gallery() {
       <Title />
       <section>
         <h1>Cool Pictures!</h1>
-        {Pics("./images/Appa.png")}
-        {Pics("./images/Haku.png")}
-        {Pics("./images/Nishio.png")}
       </section>
       <footer className="w-screen fixed bottom-0 flex justify-end bg-teal-950">
         {Socials("./images/icons/github.png", "https://github.com/John-A-Aydin")}
