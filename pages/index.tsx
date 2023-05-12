@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 
@@ -137,7 +138,10 @@ function Title() {
     window.open("./files/resume.pdf");
   }
   return (
-    <h1 onClick={handleClick} className='flex justify-center items-center p-5 text-5xl font-semibold bg-teal-950'>
+    <h1
+      onClick={handleClick}
+      className='flex justify-center items-center p-5 text-5xl font-semibold bg-teal-950'
+    >
       John Alexander Aydin
     </h1>
   )
@@ -155,18 +159,36 @@ function Socials(imgPath: string, link: string) {
     />
   )
 }
-export default function Gallery() {
+function TitlePage() {
+  function handleScroll() {
+    
+  }
   return (
-    <main className="h-screen w-screen bg-zinc-950">
-      <Title />
-      <section>
-        <h1>Cool Pictures!</h1>
-      </section>
-      <footer className="w-screen fixed bottom-0 flex justify-end bg-teal-950">
-        {Socials("./images/icons/github.png", "https://github.com/John-A-Aydin")}
-        {Socials("./images/icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
-      </footer>
-    </main>
+    <div className="w-screen h-screen flex justify-center" onScroll={handleScroll}>
+      <img src="./images/background.jpg" className="flex justify-center overflow-hidden min-h-full min-w-full"></img>
+      {/* <Image src="/images/background.jpg" alt="oops" fill={true}/> */}
+      <h1 className="flex justify-center items-center text-6xl font-semibold absolute top-1/4 text-black font-mono">John Aydin</h1>
+    </div>
+  )
+}
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>John Aydin | Home</title>
+      </Head>
+      <main className="h-screen w-screen bg-zinc-950">
+        <TitlePage />
+        <Title />
+        <section>
+          <h1>Cool Pictures!</h1>
+        </section>
+        <footer className="w-screen fixed bottom-0 flex justify-end bg-teal-950">
+          {Socials("./icons/github.png", "https://github.com/John-A-Aydin")}
+          {Socials("./icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
+        </footer>
+      </main>
+    </>
   );
 }
 
