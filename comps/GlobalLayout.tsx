@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
-import Footer from './Footer'
+import Navbar from '../comps/Navbar'
+import Footer from '../comps/Footer'
 
 interface GlobalLayoutProps {
     children: ReactNode
@@ -7,10 +8,11 @@ interface GlobalLayoutProps {
 
 const GlobalLayout = ({ children }: GlobalLayoutProps ) => {
     return (
-        <>
+        <div className="h-screen">
+            <Navbar />
             { children }
             <Footer />
-        </>
+        </div>
     );
   }
 

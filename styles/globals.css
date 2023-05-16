@@ -25,3 +25,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.h-100px {
+  height: 100px;
+}
+
+.font16 {
+  font-size: 16px;
+}
