@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
 import Navbar from '../comps/Navbar'
-import Footer from '../comps/Footer'
 
 interface GlobalLayoutProps {
     children: ReactNode
