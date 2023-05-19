@@ -1,4 +1,4 @@
-function Socials(imgPath: string, link: string) {
+function Links(imgPath: string, link: string) {
     function handleClick() {
       window.open(link);
     }
@@ -15,8 +15,9 @@ function Socials(imgPath: string, link: string) {
 export default function Footer() {
     return (
         <div className="w-screen fixed bottom-0 flex justify-end bg-gray-800 border-t border-gray-950">
-          {Socials("./icons/github.png", "https://github.com/John-A-Aydin")}
-          {Socials("./icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
+          {Links("./icons/resume-icon.svg", "./files/resume.pdf")}
+          {Links("./icons/github.png", "https://github.com/John-A-Aydin")}
+          {Links("./icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
         </div>
     );
   }

@@ -8,10 +8,9 @@ function Destination(name:string, link:string) {
 }
 export default function Navbar() {
     return (
-        <div className="w-screen h-12 fixed top-0 flex justify-end bg-gray-800 border-gray-950">
+        <div className="w-screen h-12 fixed top-0 flex justify-end bg-gray-800">
             {Destination("Home", "/")}
             {Destination("Projects", "TODO")}
-            {Destination("Resume", "TODO")}
             {Destination("About", "/about")}
         </div>
     );

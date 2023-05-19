@@ -67,10 +67,10 @@ export default function Home() {
             <h1 className="flex justify-end p-2 text-xl font-mono hover:text-gray-950">Resume</h1>
             <h1 className="flex justify-end p-2 text-xl font-mono hover:text-gray-950">About</h1>
         </div> */}
-      <Navbar />
+      {/* <Navbar /> */}
       <img src="./images/background.jpg" className="flex justify-center overflow-hidden min-h-full min-w-full"></img>
       <h1 className="flex justify-center items-center text-6xl font-semibold absolute top-1/4 text-gray-950 font-mono">John Aydin</h1>
-      <Footer />
+      {/* <Footer /> */}
       {/* <div className="w-screen fixed bottom-0 flex justify-end bg-gray-800 border-t border-gray-950">
           {Socials("./icons/github.png", "https://github.com/John-A-Aydin")}
           {Socials("./icons/linkedin.png", "https://www.linkedin.com/in/johnaaydin/")}
