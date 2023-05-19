@@ -3,7 +3,6 @@ import Footer from "@/comps/Footer";
 export default function About() {
     return (
         <div className="">
-            {/* <Navbar/> */}
             <h1>
                 Hello
             </h1>
@@ -19,7 +18,6 @@ export default function About() {
             <h1>
                 Hello
             </h1>
-            {/* <Footer /> */}
         </div>
     );
 }
