@@ -4,7 +4,6 @@ function Links(imgPath: string, link: string) {
     }
     return (
       <img
-        // className='pr-4'
         onClick={handleClick}
         src={imgPath}
         alt=""
