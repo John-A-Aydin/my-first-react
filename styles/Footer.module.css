@@ -1,0 +1,14 @@
+.item1 {
+    grid-area: overlap;
+}
+
+.item2 {
+    grid-area: overlap;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+}
